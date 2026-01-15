@@ -1,16 +1,19 @@
-# 在当前文件夹中执行（PowerShell）
+# Sync to GitHub Script
+Write-Host "Starting sync to GitHub..." -ForegroundColor Blue
+
+# Change to project directory
+cd "C:\Users\XiGeminorum\source\Java\Project\Geminorum's PlayerLog"
+
+# Initialize and sync
 git init
 git add --all
-git commit -m "Initial commit"
-git branch -M main
+git commit -m "Sync files $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 git remote add origin https://github.com/MINEFLFQ/Geminorum-s-PlayerLog.git
-git push -u origin main --force
+git branch -M main
+git push origin main --force
 
-
-Write-Host "✅ 同步完成！" -ForegroundColor Green
-Write-Host "📁 文件已上传到 GitHub" -ForegroundColor Cyan
-Write-Host "🔗 仓库地址: https://github.com/MINEFLFQ/Geminorum-s-PlayerLog" -ForegroundColor Yellow
-
-# 暂停等待用户按键
-Write-Host "`n按任意键退出..." -ForegroundColor Gray
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Show result
+Write-Host "`nSync completed successfully!" -ForegroundColor Green
+Write-Host "Repository: https://github.com/MINEFLFQ/Geminorum-s-PlayerLog" -ForegroundColor Cyan
+Write-Host "`nPress any key to exit..." -ForegroundColor Gray
+pause
