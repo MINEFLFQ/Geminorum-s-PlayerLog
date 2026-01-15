@@ -1,1 +1,4 @@
 fold/
+.gitignore
+sync.ps1
+other/
