@@ -1,8 +1,8 @@
 # Geminorum-s-PlayerLog
 A Minecraft PlayerLog
 
-作者：MINEFLFQ  
-兼容版本：Minecraft 1.21.1 Fabric  
+版本：0.0.1
+For Minecraft 1.21.1 Fabric  
 
 ## 功能
 1. 记录玩家进入/离开服务器
@@ -12,8 +12,8 @@ A Minecraft PlayerLog
 5. 支持服务器重启后继续写入
 
 ## 日志文件格式
-[2023-01-01 00:00:00.000] : Steve进入服务器 (0, 64, 0)
-
+[YYYY-MM-DD HH:MM:SS.XXX] : XXX进入服务器 (X, Y, Z)
+[YYYY-MM-DD HH:MM:SS.XXX] : XXX离开服务器 (X, Y, Z)
 
 ## 日志命名规则
 - 每周一个文件：`YYYY-MM-DD[YY-WW].log`
